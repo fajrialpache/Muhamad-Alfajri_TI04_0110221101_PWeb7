@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        textarea{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+        }
+        input{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="box" cols="30" rows="10"></textarea>
+    <br>
+    <input id="chat" type="text">
+    <button id="kirim" onclick="klik()">kirim</button>
+
+
+
+
+
+    <script>
+        let box =document.getElementById("box")
+        let chat =document.getElementById("chat")
+        let array =[]
+        let n=0
+        function klik(){
+            array.push(chat.value)
+            for (let index = 0; index <= 1; index++) {
+                document.getElementById("box").innerHTML=array.join("\n")
+                chat.value=""
+                
+            }
+        }
+    </script>
+</body>
+</html>

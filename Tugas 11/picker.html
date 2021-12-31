@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <div class="container">
+        <select name="" id="fot" onchange="pick()">
+            <option value="pik">pick</option>
+            <option value="kuda">Kuda</option>
+            <option value="burung">Burung</option>
+            <option value="musang">Musang</option>
+            <option value="kucing">Kucing</option>
+        </select>
+    </div>
+    <br>
+    <div class="img">
+        <img src="open.jpg" alt="" id="foto">
+    </div>
+
+<script>
+    function pick(){
+        let img =document.getElementById("fot").value
+        let image=document.getElementById("foto")
+        if(img == "kuda"){
+            image.src = "kuda.jpg"
+        }else if (img =="burung"){
+            image.src = "burung.jpg"
+        }else if (img =="musang"){
+            image.src = "musang.jpg"
+        }else if (img =="kucing"){
+            image.src = "kucing.jpg"
+        }
+    }
+</script>
+
+</body>
+</html>

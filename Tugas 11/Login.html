@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body">
+    <h1>Login Authentication</h1>
+    <form action="username">
+        <p>Username</p>
+        <input type="Username" id="username">
+        <p>Password</p>
+        <input type="Password" id="password">
+        <button onclick="login()">Submit</button>
+    </form>
+    
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username == "ahmad2017" && password == "integrity"){
+                alert("Login Successfull!")
+                window.open("Succes.html")
+                window.location = "Succes.html"
+            }else{
+                alert("Login Failed!")
+                window.open("Failed.html")
+                window.location = "Failed.html"
+            }
+        }
+    </script>
+</body>
+</html>

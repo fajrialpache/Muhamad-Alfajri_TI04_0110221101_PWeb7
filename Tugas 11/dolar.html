@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krus Rupiah</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Krus Rupiah - Mata Uang Asing</legend>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>Masukan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nilai" onchange="hitung_dolar()"></td>
+                    <td><select name="uang" id="valas" onchange="hitung_dolar()">
+                        <option value="dollar">Dollar US</option>
+                        <option value="singa">Dollar Singapore</option>
+                        <option value="malay">Ringgit Malaysia</option>
+                        <option value="jepang">Yen Jepang</option>
+                        <option value="euro">Euro</option>
+                        <option value="reyal">Reyal Arab Saudi</option>
+                    </select></td>
+                    <td><input type="text" id="hasil"></td>
+                </tr>
+            </table>
+    </fieldset>
+    
+    
+    
+
+
+
+    <script>
+       
+        function hitung_dolar(){
+            let nilai = Number(document.getElementById("nilai").value);
+            let valas = document.getElementById("valas")
+            if(valas.value == "dollar"){
+                let dolar = 9915
+                let jumlah = nilai * dolar
+                document.getElementById("hasil").value=jumlah
+            }
+            else if(valas.value == "singa"){
+                let singa = 13472
+                let jumlah = nilai * singa
+                document.getElementById("hasil").value=jumlah
+            }
+            else if(valas.value == "malay"){
+                let malay = 874
+                let jumlah = nilai * 874
+                document.getElementById("hasil").value=jumlah
+            }
+            else if(valas.value == "jepang"){
+                let jepang = 120
+                let jumlah = nilai * jepang
+                document.getElementById("hasil").value=jumlah
+            }
+            else if(valas.value == "euro"){
+                let euro = 15888
+                let jumlah = nilai * euro
+                document.getElementById("hasil").value=jumlah
+            }
+            else if(valas.value == "reyal"){
+                let reyal = 3592
+                let jumlah = nilai * reyal
+                document.getElementById("hasil").value=jumlah
+            }
+        }   
+        
+    </script>
+</body>
+</html>

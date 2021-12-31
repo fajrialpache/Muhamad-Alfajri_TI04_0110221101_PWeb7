@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        span {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <input type="text"id="NAMA" placeholder="NAMA"> <span class="WARNING" style="color: red;">NAMA TIDAK BOLEH KOSONG</span> <br>
+    <input type="email"id="EMAIL" placeholder="EMAIL"> <span class="WARNING" style="color: red;">EMAIL TIDAK BOLEH SALAH</span><br>
+    <input type="text"id="TUJUAN-KEBERANGKATAN" placeholder="TUJUAN KEBERANGKATAN"> <span class="WARNING" style="color: red;">SALAH</span><br>
+    <input type="time"id="JAM-KEBERANGKATAN" placeholder="JAM KEBERANGAKATAN"> <span class="WARNING" style="color: red;">SALAH</span><br>
+    <input type="number"id="JUMLAH-TICKET" placeholder="JUMLAH TICKET"> <span class="WARNING" style="color: red;">JUMLAH SALAH</span><br>
+    <input type="submit" value="masukan yang benar" id="submit" onclick="validasi()">
+
+
+
+    <script>
+    let nama=document.getElementById("NAMA")
+    let email=document.getElementById("EMAIL")
+    let tujuan=document.getElementById("TUJUAN-KEBERANGKATAN")
+    let jam=document.getElementById("JAM-KEBERANGKATAN")
+    let ticket=document.getElementById("JUMLAH-TICKET")
+    let span=document.getElementsByClassName("WARNING")
+    
+    function validasi() {
+        if (nama.value ==""){
+            span[0].style.visibility ="visible"
+        }
+        if (email.value == ""){
+            span[1].style.visibility ="visible"
+        } 
+        if (tujuan.value == ""){
+            span[2].style.visibility ="visible"
+        } 
+        if (jam.value == ""){
+            span[3].style.visibility ="visible"
+        } 
+        if (ticket.value == ""){
+            span[4].style.visibility ="visible"
+        } 
+    }
+    
+    
+    </script>
+
+
+
+</body>
+</html>
